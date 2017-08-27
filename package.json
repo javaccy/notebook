@@ -1,0 +1,26 @@
+{
+  "name": "notebook",
+  "version": "1.0.0",
+  "description": "我的笔记",
+  "main": "index.js",
+  "scripts": {
+    "start": "gitbook serve ./content ./gh-pages",
+    "build": "gitbook build ./content ./gh-pages",
+    "deploy": "node ./scripts/deploy-gh-pages.js",
+    "publish": "npm run build && npm run deploy",
+    "port": "lsof -i :35729"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javaccy/notebook.git"
+  },
+  "author": "javaccy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/javaccy/notebook/issues"
+  },
+  "homepage": "https://github.com/javaccy/notebook#readme",
+  "dependencies": {
+    "gh-pages": "^1.0.0"
+  }
+}
